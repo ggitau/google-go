@@ -1,12 +1,29 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html>
     {{template "header"}}
     <body>
-        <ul>
-            {{range .Contacts}}
-            <li><a href="/contacts/{{.Id.Hex}}">{{.FirstName}}&nbsp;{{.LastName}}</a></li>
-            {{end}}
-        </ul>
-        <a href="/new">[new]</a>
+        <div class="container">
+            <div class="row-fluid">
+                <div class="span4 offset4">
+                    <div class="row-fluid">
+                        <div class="span12">
+                            <h1>Contacts</h1>
+                        </div>
+                    </div>
+                    <div class="row-fluid">
+                        <div class="span12 contacts-wrapper">
+                            {{range .Contacts}}
+                            <div class="row-fluid contact-row" onclick="window.location='/contacts/{{.Id.Hex}}';">
+                                <div class="span12 contact" >{{.FirstName}}&nbsp;{{.LastName}}</div>
+                            </div>
+                            {{end}}
+                        </div>
+                        <div class="span12">
+                            <button class="btn" onclick="window.location='/new'">New</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </body>
 </html>

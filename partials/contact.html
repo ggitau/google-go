@@ -1,11 +1,37 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html>
-    <head>
-    </head>
+    {{template "header"}}
     <body>
-        {{.FirstName}}<br/>
-        {{.LastName}}<br/>
-        {{.Phone}}<br/>
-        {{.Email}}<br/>
+        <div class="container">
+            <div class="row-fluid">
+                <div class="span4 offset4">
+                    <div class="row-fluid">
+                        <div class="span12">
+                            <h1>Contact</h1>
+                        </div>
+                    </div>
+                    <div class="row-fluid contact-details">
+                        <div class="row-fluid">
+                            <div class="span12">
+                                <div class="span6">
+                                    <div class="span12">{{.FirstName}}</div>
+                                    <div class="span12">{{.LastName}}</div>
+                                    <div class="span12">{{.Phone}}</div>
+                                    <div class="span12">{{.Email}}</div>
+                                </div>
+                                <div class="span6">
+                                    <div class="btn-group pull-right">
+                                        <button class="btn pull-left" onclick="window.location='/';">List all</button>
+                                        <button class="btn">Edit</button>
+                                        <button class="btn">Delete</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </body>
 </html>

@@ -8,3 +8,28 @@ label{
     width:50%;
     margin:0 auto;
 }
+.row-fluid.contact-row{
+    cursor:pointer;
+    height:50px;
+    border-bottom:1px solid #ccc;
+}
+.row-fluid.contact-row:first-child{
+    border-top:1px solid #ccc;
+}
+.row-fluid.contact-row:hover{
+    background:#eee;
+}
+.row-fluid.contact-row .span12{
+    padding-top:10px;
+}
+.span12.contacts-wrapper{
+    margin-bottom:10px;
+}
+.row-fluid.contact-details .span12{
+    margin-left:0;
+}
+.row-fluid.contact-details{
+    background:#eee;
+    padding:20px;
+    margin-bottom:10px;
+}
